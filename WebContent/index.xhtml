@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+     
+<h:head>
+	<meta charset="UTF-8"/>
+	<title>Denúncia Ética</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
+	<link rel="icon" type="imagem/png" href="img/LOGO_CCEn.png" />
+</h:head>
+<h:body background="img/background.jpg"><h:form>
+
+	<p:panel id="mainPanel" styleClass="painel showcase-text-align-center" style="align: center">
+	<f:facet name="header">
+		<p:graphicImage url="img/LOGO_CCEn.png" width="55" height="55" style="float: left"/>
+		<center>
+			Comissão de Ética de Enfermagem<br/>
+			Hospital Santa Teresa
+		</center>
+	</f:facet>
+	
+
+	<p:outputLabel style="font-size: 7pt" value="* Campo obrigatório"/>
+	<p:panel header="Dados do Denunciante" styleClass="showcase-text-align-center">
+		<p:panelGrid columns="1" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Nome Completo *" />
+
+			<p:inputText id="nomeDenunciante" value="#{bean.denuncia.denunciante.nome}" required="true" requiredMessage="Campo Obrigatório" styleClass="campo">
+				<p:ajax update="msgNomeDenunciante" event="keyup" />
+			</p:inputText>
+
+			<p:message id="msgNomeDenunciante" for="nomeDenunciante" />
+
+		</p:panelGrid>
+		<p:panelGrid columns="3" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Nacionalidade" />
+			<p:outputLabel value="Profissão" />
+			<p:outputLabel value="CPF *" />
+
+			<p:inputText id="nacionalidadeDenunciante" value="#{bean.denuncia.denunciante.nacionalidade}" styleClass="campo"/>
+	        <p:selectOneMenu id="profissaoDenunciante" value="#{bean.denuncia.denunciante.profissao}" styleClass="campo">
+	            <f:selectItem itemLabel="Selecione" itemValue="" />
+	            <f:selectItem itemLabel="Aux. de Enf." itemValue="Auxiliar de Enfermagem" />
+	            <f:selectItem itemLabel="Téc. de Enf." itemValue="Técnico(a) de Enfermagem" />
+	            <f:selectItem itemLabel="Enfermeiro(a)" itemValue="Enfermeiro(a)" />
+	        </p:selectOneMenu>
+			<p:inputMask id="cpfDenunciante" value="#{bean.denuncia.denunciante.cpf}" required="true" requiredMessage="Campo Obrigatório" styleClass="campo" mask="999.999.999-99">
+				<p:ajax update="msgCpfDenunciante" event="keyup" />
+			</p:inputMask>
+
+			<p:message id="msgNacionalidadeDenunciante" for="nacionalidadeDenunciante" />
+			<p:message id="msgProfissaoDenunciante" for="profissaoDenunciante" />
+			<p:message id="msgCpfDenunciante" for="cpfDenunciante" />
+
+		</p:panelGrid>
+		<p:panelGrid columns="2" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Endereço" />
+			<p:outputLabel value="Bairro" />
+
+			<p:inputText id="enderecoDenunciante" value="#{bean.denuncia.denunciante.endereco}" styleClass="campo"/>
+			<p:inputText id="bairroDenunciante" value="#{bean.denuncia.denunciante.bairro}" styleClass="campo"/>
+
+			<p:message id="msgEnderecoDenunciante" for="enderecoDenunciante" />
+			<p:message id="msgBairroDenunciante" for="bairroDenunciante" />
+
+		</p:panelGrid>
+		<p:panelGrid columns="3" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Cidade" />
+			<p:outputLabel value="CEP" />
+			<p:outputLabel value="Telefone" />
+
+			<p:inputText id="cidadeDenunciante" value="#{bean.denuncia.denunciante.cidade}" styleClass="campo"/>
+			<p:inputMask id="cepDenunciante" value="#{bean.denuncia.denunciante.cep}" styleClass="campo" mask="99999-999"/>
+			<p:inputMask id="telefoneDenunciante" value="#{bean.denuncia.denunciante.telefone}" styleClass="campo" mask="(99) 99999-9999"/>
+
+			<p:message id="msgCidadeDenunciante" for="cidadeDenunciante" />
+			<p:message id="msgCepDenunciante" for="cepDenunciante" />
+			<p:message id="msgTelefoneDenunciante" for="telefoneDenunciante" />
+
+		</p:panelGrid>
+		<p:panelGrid columns="2" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Categoria" />
+			<p:outputLabel value="COREN nº"/>
+
+			<p:inputText id="categoriaDenunciante" value="#{bean.denuncia.denunciante.categoria}" styleClass="campo"/>
+			<p:inputText id="corenDenunciante" value="#{bean.denuncia.denunciante.coren}" styleClass="campo"/>
+
+			<p:message id="msgCategoriaDenunciante" for="categoriaDenunciante" />
+			<p:message id="msgCorenDenunciante" for="corenDenunciante" />
+		</p:panelGrid>
+	</p:panel>
+	
+	<br/>
+
+	<p:panel header="Dados do Denunciado" styleClass="showcase-text-align-center">
+		<p:panelGrid columns="1" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Nome Completo *" />
+
+			<p:inputText id="nomeDenunciado" value="#{bean.denuncia.denunciado.nome}" required="true" requiredMessage="Campo Obrigatório" styleClass="campo">
+				<p:ajax update="msgNomeDenunciado" event="keyup" />
+			</p:inputText>
+
+			<p:message id="msgNomeDenunciado" for="nomeDenunciado" />
+
+		</p:panelGrid>
+		<p:panelGrid columns="3" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Nacionalidade" />
+			<p:outputLabel value="Profissão *" />
+			<p:outputLabel value="CPF" />
+
+			<p:inputText id="nacionalidadeDenunciado" value="#{bean.denuncia.denunciado.nacionalidade}" styleClass="campo"/>
+	        <p:selectOneMenu id="profissaoDenunciado" value="#{bean.denuncia.denunciado.profissao}" required="true" requiredMessage="Campo Obrigatório" styleClass="campo">
+	            <f:selectItem itemLabel="Selecione" itemValue="" />
+	            <f:selectItem itemLabel="Aux. de Enf." itemValue="Auxiliar de Enfermagem" />
+	            <f:selectItem itemLabel="Téc. de Enf." itemValue="Técnico(a) de Enfermagem" />
+	            <f:selectItem itemLabel="Enfermeiro(a)" itemValue="Enfermeiro(a)" />
+	        </p:selectOneMenu>
+			<p:inputMask id="cpfDenunciado" value="#{bean.denuncia.denunciado.cpf}" styleClass="campo" mask="999.999.999-99"/>
+
+			<p:message id="msgNacionalidadeDenunciado" for="nacionalidadeDenunciado" />
+			<p:message id="msgProfissaoDenunciado" for="profissaoDenunciado" />
+			<p:message id="msgCpfDenunciado" for="cpfDenunciado" />
+
+		</p:panelGrid>
+		<p:panelGrid columns="2" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Endereço" />
+			<p:outputLabel value="Bairro" />
+
+			<p:inputText id="enderecoDenunciado" value="#{bean.denuncia.denunciado.endereco}" styleClass="campo"/>
+			<p:inputText id="bairroDenunciado" value="#{bean.denuncia.denunciado.bairro}" styleClass="campo"/>
+
+			<p:message id="msgEnderecoDenunciado" for="enderecoDenunciado" />
+			<p:message id="msgBairroDenunciado" for="bairroDenunciado" />
+		</p:panelGrid>
+		<p:panelGrid columns="3" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Cidade" />
+			<p:outputLabel value="CEP" />
+			<p:outputLabel value="Telefone" />
+
+			<p:inputText id="cidadeDenunciado" value="#{bean.denuncia.denunciado.cidade}" styleClass="campo"/>
+			<p:inputMask id="cepDenunciado" value="#{bean.denuncia.denunciado.cep}" styleClass="campo" mask="99999-999"/>
+			<p:inputMask id="telefoneDenunciado" value="#{bean.denuncia.denunciado.telefone}" styleClass="campo" mask="(99) 99999-9999"/>
+
+			<p:message id="msgCidadeDenunciado" for="cidadeDenunciado" />
+			<p:message id="msgCepDenunciado" for="cepDenunciado" />
+			<p:message id="msgTelefoneDenunciado" for="telefoneDenunciado" />
+
+		</p:panelGrid>
+		<p:panelGrid columns="2" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="Categoria" />
+			<p:outputLabel value="COREN nº" />
+
+			<p:inputText id="categoriaDenunciado" value="#{bean.denuncia.denunciado.categoria}" styleClass="campo"/>
+			<p:inputText id="corenDenunciado" value="#{bean.denuncia.denunciado.coren}" styleClass="campo"/>
+
+			<p:message id="msgCategoriaDenunciado" for="categoriaDenunciado" />
+			<p:message id="msgCorenDenunciado" for="corenDenunciado" />
+		</p:panelGrid>
+	</p:panel>
+	
+	<br/>
+	
+	<p:panel header="Descrição da Ocorrência *" styleClass="showcase-text-align-center">
+		<p:inputTextarea id="ocorrencia" value="#{bean.denuncia.ocorrencia}" rows="10" placeholder="Pode digitar" required="true" requiredMessage="Campo Obrigatório" styleClass="campo">
+			<p:ajax update="msgOcorrencia" event="keyup" />
+		</p:inputTextarea>
+		<p:message id="msgOcorrencia" for="ocorrencia" />
+
+		<br/>
+		<p:panelGrid columns="1" layout="grid" styleClass="showcase-text-align-center">
+
+			<p:outputLabel value="À quem pretende entregar esta denúncia?" />
+
+			<p:inputText id="entregadorDenuncia" value="#{bean.denuncia.entregador}" required="true" requiredMessage="Campo Obrigatório" styleClass="campo">
+				<p:ajax update="msgNomeDenunciado" event="keyup" />
+			</p:inputText>
+
+			<p:message id="msgEntregadorDenuncia" for="entregadorDenuncia" />
+
+		</p:panelGrid>
+
+	</p:panel>
+
+	<br/>
+	<script src="https://www.google.com/recaptcha/api.js?render=6LcL4dIUAAAAANH_HTTJSbtWSKwRLEcET26XNtj1"></script>
+	<script>
+	grecaptcha.ready(function() {
+	    grecaptcha.execute('6LcL4dIUAAAAANH_HTTJSbtWSKwRLEcET26XNtj1', {action: 'homepage'}).then(function(token) {
+	       ...
+	    });
+	});
+	</script>
+	<br/>
+	
+	<center>
+		<p:commandButton value="Enviar" action="#{bean.sendEmail()}" onclick="showSending(); false;" update="mainPanel"/><br/>
+	</center>
+
+	</p:panel>
+
+
+</h:form></h:body>
+</html>

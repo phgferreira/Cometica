@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui">
+     
+<h:head>
+	<meta charset="UTF-8"/>
+	<title>Denúncia Ética</title>
+	<link rel="icon" type="imagem/png" href="img/LOGO_CCEn.png" />
+</h:head>
+<h:body><h:form>
+<p:panel id="content" style="width: 1000px; margin-left: auto; margin-right: auto">
+<div style="margin-left:103.34px;margin-top:34.92px" class="cls_002"><span class="cls_002">CONSELHO REGIONAL DE ENFERMAGEM DO RIO DE JANEIRO</span></div>
+<div style="margin-left:126.14px" class="cls_002"><span class="cls_002">AUTARQUIA FISCALIZADORA CRIADA PELA LEI 5.905/73</span></div>
+<div style="margin-left:244.85px;margin-top:24.74px" class="cls_004"><span class="cls_004">REGISTRO DE DENÚNCIA</span></div>
+<div style="margin-left:85.10px;margin-top:10.68px" class="cls_005"><span class="cls_005">Nome da Instituição: #{bean.denuncia.instituicao.nome}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:3.12px" class="cls_005"><span class="cls_005">Endereço: #{bean.denuncia.instituicao.endereco} <br/>Bairro: #{bean.denuncia.instituicao.bairro}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:2.16px" class="cls_005"><span class="cls_005">Cidade: #{bean.denuncia.instituicao.cidade} <br/>CEP: #{bean.denuncia.instituicao.cep} <br/>Telefone: #{bean.denuncia.instituicao.telefone}<br/></span></div>
+<div style="margin-left:275.57px;margin-top:18px" class="cls_004"><span class="cls_004">DENUNCIANTE</span></div>
+<div style="margin-left:85.10px;margin-top:12.96px" class="cls_005"><span class="cls_005">Nome Completo: #{bean.denuncia.denunciante.nome}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:3.15px" class="cls_005"><span class="cls_005">Nacionalidade: #{bean.denuncia.denunciante.nacionalidade} <br/>Profissão: #{bean.denuncia.denunciante.profissao} <br/>CPF: #{bean.denuncia.denunciante.cpf}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:3.12px" class="cls_005"><span class="cls_005">Endereço: #{bean.denuncia.denunciante.endereco} <br/>Bairro: #{bean.denuncia.denunciante.bairro}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:2.16px" class="cls_005"><span class="cls_005">Cidade: #{bean.denuncia.denunciante.cidade} <br/>CEP: #{bean.denuncia.denunciante.cep} <br/>Telefone: #{bean.denuncia.denunciante.telefone}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:3.12px" class="cls_005"><span class="cls_005">Categoria: #{bean.denuncia.denunciante.categoria} <br/>COREN nº: #{bean.denuncia.denunciante.coren}<br/></span></div>
+<div style="margin-left:270.53px;margin-top:29.52px" class="cls_004"><span class="cls_004">DENUNCIADO(A)</span></div>
+<div style="margin-left:85.10px;margin-top:12.96px" class="cls_005"><span class="cls_005">Nome Completo: #{bean.denuncia.denunciado.nome}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:3.12px" class="cls_005"><span class="cls_005">Nacionalidade: #{bean.denuncia.denunciado.nacionalidade} <br/>Profissão: #{bean.denuncia.denunciado.profissao} <br/>CPF: #{bean.denuncia.denunciado.cpf}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:3.12px" class="cls_005"><span class="cls_005">Endereço: #{bean.denuncia.denunciado.endereco} <br/>Bairro: #{bean.denuncia.denunciado.bairro}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:3.14px" class="cls_005"><span class="cls_005">Cidade: #{bean.denuncia.denunciado.cidade} <br/>CEP: #{bean.denuncia.denunciado.cep} <br/>Telefone: #{bean.denuncia.denunciado.telefone}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:3.12px" class="cls_005"><span class="cls_005">Categoria: #{bean.denuncia.denunciado.categoria} <br/>COREN nº: #{bean.denuncia.denunciado.coren}<br/></span></div>
+<div style="margin-left:278.57px;margin-top:17.04px" class="cls_004"><span class="cls_004">OCORRÊNCIA</span></div>
+<div style="margin-left:85.10px;margin-top:12.96px" class="cls_005"><span class="cls_005">#{bean.denuncia.ocorrencia}<br/></span></div>
+<div style="margin-left:85.10px;margin-top:10.68px" class="cls_005"><span class="cls_005">Entregador: #{bean.denuncia.entregador}<br/></span></div>
+<!--<div style="position:absolute;left:85.10px;top:460.51px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:478.15px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:495.79px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:513.43px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:531.07px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:548.74px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:566.38px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:584.02px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:601.66px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:619.30px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:637.06px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:654.70px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:672.34px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:689.98px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:707.64px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:725.28px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+</div>
+<div style="position:absolute;left:50%;margin-left:-306px;top:802px;width:612px;height:792px;border-style:outset;overflow:hidden">
+<div style="position:absolute;left:0px;top:0px">
+<img src="650f8706-5af8-11ea-8b25-0cc47a792c0a_id_650f8706-5af8-11ea-8b25-0cc47a792c0a_files/background2.jpg" width=612 height=792></div>
+<div style="position:absolute;left:103.34px;top:34.92px" class="cls_002"><span class="cls_002">CONSELHO REGIONAL DE ENFERMAGEM DO RIO DE JANEIRO</span></div>
+<div style="position:absolute;left:126.14px;top:51.00px" class="cls_002"><span class="cls_002">AUTARQUIA FISCALIZADORA CRIADA PELA LEI 5.905/73</span></div>
+<div style="position:absolute;left:85.10px;top:90.14px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:107.78px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:125.42px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:143.06px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:160.70px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:178.34px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:195.98px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:213.62px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:231.41px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:249.05px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:266.69px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:284.33px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:301.97px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:319.61px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:337.25px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:354.89px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:372.53px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:390.19px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:407.83px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:425.47px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:443.11px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:460.87px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:478.51px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:496.15px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:513.79px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:531.43px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:549.10px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:566.74px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>
+<div style="position:absolute;left:85.10px;top:584.38px" class="cls_005"><span class="cls_005">_____________________________________________________________________________________</span></div>-->
+<div style="margin-left:141.98px;margin-top:52.92px" class="cls_005"><span class="cls_005">Rio de Janeiro, ________ de __________________________ de ____________.<br/></span></div>
+<div style="margin-left:144.98px;margin-top:52.92px" class="cls_005"><span class="cls_005">Assinatura do Denunciante: _________________________________________</span></div>
+<br/><br/><br/>
+</p:panel>
+	<center>
+		<br/>
+		<p:commandButton value="Imprimir">
+			<p:printer target="content"/>
+		</p:commandButton>
+		<p:commandButton value="Voltar" action="#{bean.comeBack()}" style="margin-left: 50px"/>
+		<br/><br/>
+	</center>
+</h:form></h:body>
+</html>

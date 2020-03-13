@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image: url("img/background.jpg");
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.painel {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.campo {
+	width: 99% !important;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ui-panel-content .ui-widget-content {
+	border: 0px;
+}
