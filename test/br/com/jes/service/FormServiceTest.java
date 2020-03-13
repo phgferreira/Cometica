@@ -16,7 +16,6 @@ class FormServiceTest {
 	public void loadFileTest() {
 		try {
 			String result = new FormService().loadFile(path);
-			System.out.println("Resultado:\n"+result);
 			assertNotNull(result);
 		} catch (IOException e) {
 			e.printStackTrace();

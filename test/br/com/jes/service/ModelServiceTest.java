@@ -73,9 +73,6 @@ class ModelServiceTest {
 			e.printStackTrace();
 		}
 		
-		for (String key : result.keySet())
-			System.out.println(key+" = "+result.get(key));
-		
 		assertNotNull(result);
 	}
 
