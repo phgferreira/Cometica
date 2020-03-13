@@ -7,6 +7,17 @@
   <name>cometica</name>
   <description>Comissão Ética de Enfermagem (módulo de denúncia)</description>
   <dependencies>
+	<!-- JavaMail - https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>javax.mail-api</artifactId>
+	    <version>1.6.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.sun.mail</groupId>
+	    <artifactId>javax.mail</artifactId>
+	    <version>1.6.0</version>
+	</dependency>
 	<!-- https://mvnrepository.com/artifact/com.sun.faces/jsf-api -->
 	<dependency>
 	    <groupId>com.sun.faces</groupId>
