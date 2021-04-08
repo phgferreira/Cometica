@@ -17,7 +17,9 @@ public class DenunciaEticaController {
 	// Dados para contrução do email
 	private String pathFile = "http://10.7.0.15/intranet/default_forms/form_denuncia_etica.html";
 	private String tituloEmail = "Comissão de Ética - Denúncia";
-	private String enderecos = "juliana.santos@hst.org.br, iris.lima@hst.org.br";
+	//private String enderecos = "juliana.santos@hst.org.br, iris.lima@hst.org.br";
+	/* Modificado dia 08/04/2021 pelo Paulo Ferreira  - chamado C2104/2987 */
+	private String enderecos = "comissaoeticaenfermagem@hst.org.br";
 	
 	// Dados para definição da conta
 	private String servidor = "smtp.office365.com";
